@@ -6,5 +6,5 @@ Create forms from Objects
 ## Installation
 First you need to install the npm module:
 ```sh
-npm install ng2-translate --save
+npm install angular2-objectform --save
 ```
