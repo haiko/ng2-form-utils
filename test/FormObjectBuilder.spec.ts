@@ -7,38 +7,8 @@ import {
   TestComponentBuilder
 } from 'angular2/testing';
 
-import {FormObjectBuilder} from './FormObjectBuilder';
+import {FormObjectBuilder} from '../src/FormObjectBuilder';
 
-export class Person {
-  name:string;
-
-  male:boolean;
-
-  age:number;
-
-  constructor(name:string, male:boolean, age:number) {
-    this.name = name;
-    this.male = male;
-    this.age = age;
-  }
-
-}
-
-
-export class Family {
-
-  dad: Person;
-  mom: Person;
-  lastNames: string[];
-
-
-  constructor(dad: Person, mom: Person, ...lastNames: string[]) {
-    this.dad = dad;
-    this.mom = mom;
-    this.lastNames = lastNames;
-  }
-
-}
 
 
 describe('FormObjectBuilder', () => {
