@@ -1,9 +1,11 @@
 {
-  "name": "angular2-library-example",
+  "name": "angular2-objectforms",
   "version": "1.0.6",
-  "description": "An example repository for building your own Angular 2 library",
+  "description": "Create Angular2 Forms from objects",
   "main": "angular2-library-example.js",
   "scripts": {
+    "test": "tsc && karma start",
+    "test-watch": "tsc && karma start --no-single-run --auto-watch",
     "watch": "tsc -p src -w",
     "build": "rm -rf lib && tsc -p src"
   },
@@ -12,8 +14,8 @@
     "url": "git+https://github.com/jhades/angular2-library-seed.git"
   },
   "keywords": [
-    "Angular",
-    "2",
+    "angular",
+    "angular2",
     "Library",
     "Seed"
   ],
@@ -24,7 +26,14 @@
   },
   "homepage": "https://github.com/jhades/angular2-library-seed#readme",
   "devDependencies": {
-    "typescript": "^1.7.5"
+    "typescript": "^1.7.5",
+    "jasmine-core": "~2.4.1",
+    "karma": "~0.13.15",
+    "karma-chrome-launcher": "~0.2.2",
+    "karma-firefox-launcher": "~0.1.7",
+    "karma-jasmine": "~0.3.8",
+    "karma-typescript-preprocessor": "0.0.21",
+    "reflect-metadata": "0.1.2"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.0",
