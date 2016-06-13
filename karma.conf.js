@@ -37,13 +37,14 @@ module.exports = function(config) {
         ],
 
         preprocessors: {
-
+            '**/*.ts': ['typescript']
         },
 
         typescriptPreprocessor: {
             options: require('./tsconfig.json').compilerOptions,
             typings: [
-                "typings/main.d.ts"
+                "typings/index.d.ts",
+                'node_modules/reflect-metadata/reflect-metadata.d.ts'
             ]
         },
 
@@ -68,7 +69,7 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits

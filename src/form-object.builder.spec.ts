@@ -1,6 +1,7 @@
 import {
     it,
     fit,
+    iit,
     inject,
     injectAsync,
     describe
@@ -15,7 +16,7 @@ import { Person } from '../test/person';
 
 describe('FormObjectBuilder', () => {
 
-    fit('should create Controls and ControlGroup for a simple Object', () => {
+    iit('should create Controls and ControlGroup for a simple Object', () => {
 
         let address = new Address('Dam 21', 'Amsterdam', 'Nederland');
         let simpleObject = new Person('Foobar', 27, false, new Date('12-12-2000'), 'test@github.com', address);

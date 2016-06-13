@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "pretest": "tsc",
-    "test": "karma start",
+    "test": "karma start karma.conf.js",
     "test-watch": "tsc && karma start --no-single-run --auto-watch",
     "postinstall": "typings install",
     "prepublish": "tsc",
