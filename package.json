@@ -1,42 +1,71 @@
 {
   "name": "angular2-objectforms",
-  "version": "1.0.6",
-  "description": "Create Angular2 Forms from objects",
-  "main": "angular2-library-example.js",
+  "version": "0.0.1",
+  "description": "Create forms from objects",
+  "main": "ng2-formobject.ts",
   "scripts": {
-    "test": "tsc && karma start",
+    "lint": "tslint src/**/*.ts",
+    "pretest": "tsc",
+    "test": "karma start",
     "test-watch": "tsc && karma start --no-single-run --auto-watch",
-    "watch": "tsc -p src -w",
-    "build": "rm -rf lib && tsc -p src"
+    "postinstall": "typings install",
+    "prepublish": "tsc",
+    "tsc": "tsc",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhades/angular2-library-seed.git"
+    "url": "git+https://github.com/haiko/angular2-objectforms.git"
   },
   "keywords": [
-    "angular",
-    "angular2",
-    "Library",
-    "Seed"
+    "Angular",
+    "2",
+    "Form",
+    "Object",
+    "ng2"
   ],
-  "author": "jhades.dev@gmail.com",
+  "author": "hvdschaaf@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jhades/angular2-library-seed/issues"
+    "url": "https://github.com/haiko/angular2-objectforms/issues"
   },
-  "homepage": "https://github.com/jhades/angular2-library-seed#readme",
+  "homepage": "https://github.com/haiko/angular2-objectforms#readme",
   "devDependencies": {
-    "typescript": "^1.7.5",
-    "jasmine-core": "~2.4.1",
-    "karma": "~0.13.15",
-    "karma-chrome-launcher": "~0.2.2",
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "codelyzer": "0.0.23",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "~0.1.7",
-    "karma-jasmine": "~0.3.8",
+    "karma-jasmine": "^0.3.8",
     "karma-typescript-preprocessor": "0.0.21",
-    "reflect-metadata": "0.1.2"
+    "lodash": "^4.13.1",
+    "rxjs": "~5.0.0-beta.6",
+    "systemjs": "^0.19.31",
+    "systemjs-builder": "^0.15.13",
+    "tslint": "^3.7.1",
+    "tslint-loader": "^2.1.3",
+    "typescript": "^1.8.9",
+    "typings": "~1.0.3",
+    "zone.js": "~0.6.12"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.0",
-    "rxjs": "5.0.0-beta.0"
+    "@angular/common": ">= 2.0.0-rc.1",
+    "@angular/compiler": ">= 2.0.0-rc.1",
+    "@angular/core": ">= 2.0.0-rc.1",
+    "lodash": "^4.13.1",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "~5.0.0-beta.6",
+    "zone.js": "~0.6.12"
+  },
+  "engines": {
+    "node": ">= 4.2.1",
+    "npm": ">= 3"
   }
 }

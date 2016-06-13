@@ -1,5 +1,5 @@
 # angular2-objectform
-Create forms from Objects
+Create a Form from Objects
 
 * [Installation](#installation)
 

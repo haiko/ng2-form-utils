@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "outDir": "../lib"
+    },
+    "definitions": [
+        "node_modules/reflect-metadata/reflect-metadata.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

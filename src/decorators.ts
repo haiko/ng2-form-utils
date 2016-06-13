@@ -33,7 +33,7 @@ export function email(target: Object, propertyKey: string) {
  * @param propertyKey name of property of object.
  * @private
  */
- function _addValidatorFlag(flag: string, target, propertyKey) {
+ function _addValidatorFlag(flag: string, target: Object, propertyKey: string) {
 
    // create empty array if none exists
    if ( !Reflect.hasMetadata(VALIDATORS, target, propertyKey)) {

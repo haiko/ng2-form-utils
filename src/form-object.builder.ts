@@ -3,20 +3,21 @@
  *
  * Creates a ControlGroup and Controls for fields from given Object. Traverses object tree until primary type are encountered ( string, number, boolean ).
  */
-import {Validators, Control, ControlGroup} from '@angular/common';
+import { Validators, Control, ControlGroup } from '@angular/common';
 import 'rxjs/add/operator/debounceTime';
 import * as _ from 'lodash';
-import {CustomInputValidators} from './CustomInputValidators';
+import 'reflect-metadata';
+import { FormValidators } from './form.validators';
 
 
 
 export class FormObjectBuilder {
 
-  public controlGroup:ControlGroup;
+  public controlGroup: ControlGroup;
 
-  private controls:{ [key:string]:Control} = {};
+  private controls: { [key: string]: Control} = {};
 
-  private formModel:any;
+  private formModel: any;
 
 
   /**
@@ -25,7 +26,7 @@ export class FormObjectBuilder {
    *
    * @param object
    */
-  constructor(object:any) {
+  constructor(object: any) {
 
     this.formModel = object;
     this._createControls(this.formModel, '')
@@ -50,7 +51,7 @@ export class FormObjectBuilder {
    * @param name key for Control.
    * @returns {Control}
    */
-  getControl(name:string) {
+  getControl(name: string) {
     return this.controls[name];
   }
 
@@ -91,8 +92,8 @@ export class FormObjectBuilder {
    * @param prefix creating navigating path on object to get property.
    * @private
    */
-  _createControls(object:any, prefix:string) {
-    for (var property in object) {
+  _createControls(object: any, prefix: string) {
+    for (let property in object) {
       if (object.hasOwnProperty(property)) {
         if (object[property] === null || object[property] === 'undefined') {
           throw new Error('cannot determine type of ' + property);
@@ -105,26 +106,26 @@ export class FormObjectBuilder {
             propertyName = prefix.concat('.').concat(property);
           }
 
-          let validatorComponents:Array = [];
+          let validatorComponents: Array<any> = [];
 
-          if(Reflect.hasMetadata('validators', object,  property)){
+          if ( Reflect.hasMetadata('validators', object,  property)) {
             console.log(Reflect.getMetadata('validators', object, property));
-            let validators:Array<string> = Reflect.getMetadata('validators', object, property);
+            let validators: Array<string> = Reflect.getMetadata('validators', object, property);
 
             // required
-            if(validators.indexOf('required') > -1 ){
+            if (validators.indexOf('required') > -1 ){
               validatorComponents.push(Validators.required);
             }
 
             // email
-            if(validators.indexOf('email') > -1 ){
-              validatorComponents.push(CustomInputValidators.isMailAddress);
+            if (validators.indexOf('email') > -1 ){
+              validatorComponents.push(FormValidators.isMailAddress);
             }
           }
 
-          let control = null;
+          let control: any = null;
 
-          if(validatorComponents.length > 0){
+          if (validatorComponents.length > 0) {
             console.log('add validator');
             console.log(validatorComponents);
             console.log(property);
@@ -141,7 +142,7 @@ export class FormObjectBuilder {
           let self = this;
 
           control.valueChanges.debounceTime(500 /* ms */)
-            .subscribe((newValue) => {
+            .subscribe((newValue: any) => {
 
               // touch value to make it work.
               let value = newValue;
