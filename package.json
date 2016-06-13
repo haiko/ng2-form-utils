@@ -44,7 +44,7 @@
     "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "~0.1.7",
     "karma-jasmine": "^0.3.8",
-    "karma-typescript-preprocessor": "0.0.21",
+    "karma-typescript-preprocessor": "0.2.0",
     "lodash": "^4.13.1",
     "rxjs": "~5.0.0-beta.6",
     "systemjs": "^0.19.31",
