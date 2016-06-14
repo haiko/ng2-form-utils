@@ -7,10 +7,10 @@ import {
     describe
 } from '@angular/core/testing';
 
-import { FormObjectBuilder } from './form-object.builder';
+import { FormObjectBuilder } from '../src/form-object.builder';
 
-import { Address } from '../test/address';
-import { Person } from '../test/person';
+import { Address } from './address';
+import { Person } from './person';
 
 
 

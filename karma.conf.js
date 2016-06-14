@@ -23,6 +23,10 @@ module.exports = function(config) {
 
             { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false, served: true },
+            { pattern: 'node_modules/lodash/**/*.js', included: false, watched: false, served: true },
+            { pattern: 'node_modules/reflect-metadata/**/*.js', included: false, watched: false, served: true },
+            { pattern: 'node_modules/crypto-js/**/*.js', included: false, watched: false, served: true },
+            { pattern: 'node_modules/symbol-observable/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false, served: true }, // PhantomJS2 (and possibly others) might require it
 
             { pattern: 'ng2-formobject.ts', included: false, watched: true }, // source files
@@ -45,7 +49,11 @@ module.exports = function(config) {
             typings: [
                 "typings/index.d.ts",
                 'node_modules/reflect-metadata/reflect-metadata.d.ts'
-            ]
+            ],
+            // transforming the filenames
+            transformPath: function(path) {
+                return path.replace(/\.ts$/, '.js');
+            }
         },
 
         // test results reporter to use
@@ -69,7 +77,7 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
         // Continuous Integration PhantomJSmode
         // if true, Karma captures browsers, runs the tests and exits

@@ -12,7 +12,11 @@ System.config({
     defaultJSExtensions: true,
     map: {
         '@angular': 'node_modules/@angular',
-        'rxjs': 'node_modules/rxjs'
+        'rxjs': 'node_modules/rxjs',
+        'lodash': 'node_modules/lodash/lodash.js',
+        'reflect-metadata': 'node_modules/reflect-metadata/Reflect.js', 
+        'crypto': 'node_modules/crypto-js/crypto-js.js',
+        'symbol-observable': 'node_modules/symbol-observable/ponyfill.js'
     },
     packages: {
         '@angular/common': { main: 'index.js', defaultExtension: 'js' },

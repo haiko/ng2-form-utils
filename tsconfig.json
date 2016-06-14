@@ -6,9 +6,6 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "sourceMap": true,
-        "declaration": true,
-        "noResolve": true,
-        "moduleResolution": "node",
         "outDir": "../lib"
     },
     "definitions": [
