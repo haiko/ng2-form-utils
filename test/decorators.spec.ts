@@ -22,7 +22,10 @@ export function main() {
 
             decorarors.required(person, 'name');
             decorarors.required(address, 'street');
-            expect(Reflect.get).toBe(true);
+
+            let validators: Array<string> = Reflect.getMetadata(decorarors.VALIDATORS, person, 'name');
+            expect(validators).toBeDefined();
+            expect(validators[0]).toBe('required');
         });
 
 
