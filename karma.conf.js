@@ -63,6 +63,7 @@ module.exports = function(config) {
             'karma-jasmine',
             'karma-coverage',
             'karma-chrome-launcher',
+            'karma-firefox-launcher',
             'karma-typescript-preprocessor',
             'karma-spec-reporter'
         ],
