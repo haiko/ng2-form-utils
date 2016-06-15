@@ -1,8 +1,10 @@
+//import Decorator = ts.Decorator;
 /**
  * Created by haiko on 28-5-16.
  */
 
-const VALIDATORS = 'validators';
+export const VALIDATORS = 'ng2-formobject.validators';
+
 
 /**
  * required decorator

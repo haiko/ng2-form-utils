@@ -8,6 +8,7 @@ import 'rxjs/add/operator/debounceTime';
 import * as _ from 'lodash';
 import 'reflect-metadata';
 import { FormValidators } from './form.validators';
+import * as decorator from './decorators';
 
 
 
@@ -99,7 +100,7 @@ export class FormObjectBuilder {
           throw new Error('cannot determine type of ' + property);
         }
 
-        if (this.isPrimitive(object, property)) {
+        if (this._isPrimitive(object, property)) {
           let propertyName = property;
 
           if (prefix) {
@@ -108,9 +109,9 @@ export class FormObjectBuilder {
 
           let validatorComponents: Array<any> = [];
 
-          if ( Reflect.hasMetadata('validators', object,  property)) {
-            console.log(Reflect.getMetadata('validators', object, property));
-            let validators: Array<string> = Reflect.getMetadata('validators', object, property);
+          if ( Reflect.hasMetadata(decorator.VALIDATORS, object,  property)) {
+            console.log(Reflect.getMetadata(decorator.VALIDATORS, object, property));
+            let validators: Array<string> = Reflect.getMetadata(decorator.VALIDATORS, object, property);
 
             // required
             if (validators.indexOf('required') > -1 ){
@@ -165,7 +166,7 @@ export class FormObjectBuilder {
    * @param property
    * @returns {boolean|boolean}
      */
-  private isPrimitive(object: any, property: string) {
+  private _isPrimitive(object: any, property: string) {
       return typeof object[property] === 'number' || typeof object[property] === 'string' || typeof object[property] === 'boolean'
           || (typeof object[property] === 'object' && Array.isArray(object[property])) || (typeof object[property] === 'object' && Object.prototype.toString.call(object[property]) === '[object Date]');
       }
