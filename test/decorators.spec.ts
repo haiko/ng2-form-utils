@@ -16,7 +16,7 @@ export function main() {
 
     describe('decorators', () => {
 
-        iit('should check required is add as metadata to object property', () => {
+        it('should check required is add as metadata to object property', () => {
             let address = new Address('Dam 21', 'Amsterdam', 'Nederland');
             let person = new Person('Foobar', 27, false, new Date('12-12-2000'), 'test@github.com', address);
 
