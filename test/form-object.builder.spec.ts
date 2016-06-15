@@ -27,6 +27,7 @@ export function main() {
             expect(fob.getControlGroup().contains('name')).toBe(true);
             expect(fob.getControlGroup().contains('male')).toBe(true);
             expect(fob.getControlGroup().contains('age')).toBe(true);
+            expect(fob.getControlGroup().contains('birthDate')).toBe(true);
 
         });
 

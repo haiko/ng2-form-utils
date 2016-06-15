@@ -99,7 +99,9 @@ export class FormObjectBuilder {
           throw new Error('cannot determine type of ' + property);
         }
 
-        if (typeof object[property] === 'number' || typeof object[property] === 'string' || typeof object[property] === 'boolean' || (typeof object[property] === 'object' && Array.isArray(object[property]))) {
+        console.log(Object.prototype.toString.call(object[property]));
+        if (typeof object[property] === 'number' || typeof object[property] === 'string' || typeof object[property] === 'boolean'
+            || (typeof object[property] === 'object' && Array.isArray(object[property])) || (typeof object[property] === 'object' && Object.prototype.toString.call(object[property]) === '[object Date]')) {
           let propertyName = property;
 
           if (prefix) {
