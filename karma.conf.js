@@ -31,7 +31,8 @@ module.exports = function(config) {
 
             { pattern: 'ng2-formobject.ts', included: false, watched: true }, // source files
             { pattern: 'src/**/*.ts', included: false, watched: true }, // source files
-            { pattern: 'test/**/*.ts', included: false, watched: true }, // test files
+            {pattern: 'lib/**/*.js', included: false, watched: true},
+         //   { pattern: 'test/**/*.ts', included: false, watched: true }, // test files
             'karma-test-shim.js'
         ],
 
@@ -41,7 +42,8 @@ module.exports = function(config) {
         ],
 
         preprocessors: {
-            '**/*.ts': ['typescript']
+            '**/*.ts': ['typescript'],
+            './lib/**/!(*spec).js': ['coverage']
         },
 
         typescriptPreprocessor: {
@@ -56,10 +58,34 @@ module.exports = function(config) {
             }
         },
 
+        // Karma plugins loaded
+        plugins: [
+            'karma-jasmine',
+            'karma-coverage',
+            'karma-chrome-launcher',
+            'karma-typescript-preprocessor',
+            'karma-spec-reporter'
+        ],
+
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['progress', 'spec', 'dots', 'coverage'],
+
+        coverageReporter: {
+            reporters:[
+                {type: 'json', subdir: '.', file: 'coverage-final.json'}
+            ]
+        },
+
+        specReporter: {
+            maxLogLines: 5,         // limit number of lines logged per test
+            suppressErrorSummary: true,  // do not print error summary
+            suppressFailed: false,  // do not print information about failed tests
+            suppressPassed: false,  // do not print information about passed tests
+            suppressSkipped: true,  // do not print information about skipped tests
+            showSpecTiming: false // print the time elapsed for each spec
+        },
 
 
         // web server port
@@ -70,14 +96,15 @@ module.exports = function(config) {
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_DEBUG,
+        logLevel: config.LOG_INFO,
 
         // enable / disable watching file and executing tests whenever any file changes
         autoWatch: false,
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['PhantomJS'],
+        // PhantomJS gives error.
+        browsers: ['Chrome'],
 
         // Continuous Integration PhantomJSmode
         // if true, Karma captures browsers, runs the tests and exits

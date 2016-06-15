@@ -6,7 +6,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "sourceMap": true,
-        "outDir": "../lib"
+        "outDir": "./lib"
     },
     "definitions": [
         "node_modules/reflect-metadata/reflect-metadata.d.ts"
