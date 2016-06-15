@@ -14,7 +14,7 @@ export class FormValidators {
     if ( control.value !== '' && isNaN(control.value)) {
       return { 'nan': true};
     }
-    return undefined;
+    return { 'nan': false};
   }
 
   static isMailAddress(control: Control): ValidationResult {
@@ -24,6 +24,6 @@ export class FormValidators {
     if ( control.value !== '' && !EMAIL_REGEXP.test(control.value)) {
       return {'mail_format_error' : true};
     }
-    return undefined;
+    return {'mail_format_error' : false};
   }
 }

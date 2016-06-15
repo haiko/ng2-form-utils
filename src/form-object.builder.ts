@@ -99,9 +99,7 @@ export class FormObjectBuilder {
           throw new Error('cannot determine type of ' + property);
         }
 
-        console.log(Object.prototype.toString.call(object[property]));
-        if (typeof object[property] === 'number' || typeof object[property] === 'string' || typeof object[property] === 'boolean'
-            || (typeof object[property] === 'object' && Array.isArray(object[property])) || (typeof object[property] === 'object' && Object.prototype.toString.call(object[property]) === '[object Date]')) {
+        if (this.isPrimitive(object, property)) {
           let propertyName = property;
 
           if (prefix) {
@@ -159,4 +157,16 @@ export class FormObjectBuilder {
       }
     }
   }
+
+  /**
+   * Check properties on given object.
+   *
+   * @param object
+   * @param property
+   * @returns {boolean|boolean}
+     */
+  private isPrimitive(object: any, property: string) {
+      return typeof object[property] === 'number' || typeof object[property] === 'string' || typeof object[property] === 'boolean'
+          || (typeof object[property] === 'object' && Array.isArray(object[property])) || (typeof object[property] === 'object' && Object.prototype.toString.call(object[property]) === '[object Date]');
+      }
 }
