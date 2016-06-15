@@ -9,6 +9,7 @@ node_js:
   - '5'
 before_install:
   - npm i -g npm@^3.7
+  - npm install lodash
 before_script:
   - npm prune
 before_script:
