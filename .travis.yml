@@ -8,9 +8,7 @@ notifications:
 node_js:
   - '5'
 before_install:
-  - npm i -g npm@^3.7
-  - npm install lodash
-  - typings install lodash
+  - npm i -g npm@^3.8
 before_script:
   - npm prune
 before_script:
