@@ -21,7 +21,7 @@ module.exports = function(config) {
             'node_modules/systemjs/dist/system.src.js',
             'node_modules/reflect-metadata/Reflect.js',
             'node_modules/crypto-js/crypto-js.js',
-            'node_modules/symbol-observable/ponyfill.js',
+            'node_modules/systemjs/dist/system-polyfills.js',
 
             { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false, served: true },
