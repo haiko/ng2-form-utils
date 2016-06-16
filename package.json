@@ -1,7 +1,7 @@
 {
-  "name": "angular2-objectforms",
+  "name": "ng2-formobject",
   "version": "0.0.1",
-  "description": "Create forms from objects",
+  "description": "Create forms from objects with Angular2",
   "main": "ng2-formobject.ts",
   "scripts": {
     "lint": "tslint src/**/*.ts",
