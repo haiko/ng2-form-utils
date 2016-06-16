@@ -1,5 +1,5 @@
 addons:
-  firefox: "39.0"
+  firefox: "latest"
 sudo: false
 language: node_js
 cache:

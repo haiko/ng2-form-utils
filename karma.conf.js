@@ -34,7 +34,7 @@ module.exports = function(config) {
             { pattern: 'ng2-formobject.ts', included: false, watched: true }, // source files
             { pattern: 'src/**/*.ts', included: false, watched: true }, // source files
             {pattern: 'lib/**/*.js', included: false, watched: true},  // test again for coverage
-            { pattern: 'test/**/*.ts', included: false, watched: true }, // test files
+           // { pattern: 'test/**/*.ts', included: false, watched: true }, // test files
             'karma-test-shim.js'
         ],
 
