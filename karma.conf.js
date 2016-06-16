@@ -67,17 +67,27 @@ module.exports = function(config) {
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-typescript-preprocessor',
-            'karma-spec-reporter'
+            'karma-spec-reporter',
+            'karma-coveralls'
         ],
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'spec', 'dots', 'coverage'],
+        reporters: ['progress', 'spec', 'dots', 'coverage', 'coveralls'],
 
         coverageReporter: {
             reporters:[
-                {type: 'json', subdir: '.', file: 'coverage-final.json'}
+                {
+                    type: 'json', subdir: '.',
+                    file: 'coverage-final.json'
+                },
+                {
+                    type: 'lcov', // lcov or lcovonly are required for generating lcov.info files
+                    subdir: '.',
+                    dir: 'coverage/'
+                }
+
             ]
         },
 
