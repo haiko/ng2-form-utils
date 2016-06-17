@@ -38,27 +38,21 @@ module.exports = function(config) {
             'karma-test-shim.js'
         ],
 
+        // proxied base paths
+        proxies: {
+            // required for component assests fetched by Angular's compiler
+            '/src/': '/base/src/'
+        },
+
         // list of files to exclude
         exclude: [
             'node_modules/@angular/**/*_spec.js'
         ],
 
         preprocessors: {
-            '**/*.ts': ['typescript'],
             './lib/**/!(*spec).js': ['coverage']
         },
-
-        typescriptPreprocessor: {
-            options: require('./tsconfig.json').compilerOptions,
-            typings: [
-                "typings/index.d.ts",
-                'node_modules/reflect-metadata/reflect-metadata.d.ts'
-            ],
-            // transforming the filenames
-            transformPath: function(path) {
-                return path.replace(/\.ts$/, '.js');
-            }
-        },
+        
 
         // Karma plugins loaded
         plugins: [
@@ -66,7 +60,6 @@ module.exports = function(config) {
             'karma-coverage',
             'karma-chrome-launcher',
             'karma-firefox-launcher',
-            'karma-typescript-preprocessor',
             'karma-spec-reporter',
             'karma-coveralls'
         ],
@@ -74,7 +67,7 @@ module.exports = function(config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'spec', 'dots', 'coverage', 'coveralls'],
+        reporters: ['progress', 'spec', 'dots', 'coverage'],
 
         coverageReporter: {
             reporters:[

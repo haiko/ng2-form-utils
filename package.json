@@ -50,7 +50,6 @@
     "karma-firefox-launcher": "1.0.x",
     "karma-jasmine": "1.0.x",
     "karma-spec-reporter": "0.0.26",
-    "karma-typescript-preprocessor": "0.2.0",
     "lodash": "^4.13.1",
     "remap-istanbul": "0.6.x",
     "rxjs": "~5.0.0-beta.6",
