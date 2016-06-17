@@ -4,4 +4,3 @@ node_modules
 lib
 /typings/
 coverage
-npm-debug.log
