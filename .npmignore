@@ -9,6 +9,7 @@ coverage
 !*.d.ts
 typings
 typings.json
+test
 
 #################
 ## IntelliJ
