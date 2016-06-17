@@ -1,6 +1,6 @@
 {
   "name": "ng2-formobject",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create forms from objects with Angular2",
   "main": "ng2-formobject.ts",
   "scripts": {
