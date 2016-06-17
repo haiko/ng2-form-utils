@@ -13,7 +13,7 @@ import { FormObjectBuilder } from '../src/form-object.builder';
 
 import { Address } from './address';
 import { Person } from './person';
-import {Control} from "@angular/common";
+import {Control} from '@angular/common';
 
 export function main() {
 
