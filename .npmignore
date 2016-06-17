@@ -1,0 +1,20 @@
+
+#################
+## Misc
+#################
+node_modules/*
+npm-debug.log
+coverage
+*.ts
+!*.d.ts
+typings
+typings.json
+
+#################
+## IntelliJ
+#################
+.idea
+.project
+.settings
+.idea/*
+*.iml
