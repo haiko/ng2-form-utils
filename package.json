@@ -1,6 +1,5 @@
 {
   "name": "ng2-formobject",
-  "version": "0.0.2",
   "description": "Create forms from objects with Angular2",
   "main": "ng2-formobject.ts",
   "scripts": {
@@ -18,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haiko/angular2-objectforms.git"
+    "url": "https://github.com/haiko/ng2-formobject.git"
   },
   "keywords": [
     "Angular2",
@@ -29,9 +28,9 @@
   "author": "hvdschaaf@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haiko/angular2-objectforms/issues"
+    "url": "https://github.com/haiko/ng2-formobject/issues"
   },
-  "homepage": "https://github.com/haiko/angular2-objectforms#readme",
+  "homepage": "https://github.com/haiko/ng2-formobject#readme",
   "devDependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",
@@ -59,7 +58,8 @@
     "tslint-loader": "^2.1.3",
     "typescript": "^1.8.9",
     "typings": "~1.1.0",
-    "zone.js": "~0.6.12"
+    "zone.js": "~0.6.12",
+    "semantic-release": "^4.3.5"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
