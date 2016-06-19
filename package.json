@@ -23,7 +23,9 @@
     "Angular2",
     "Form",
     "Object",
-    "ng2"
+    "ng2",
+    "decorator",
+    "annotation"
   ],
   "author": "hvdschaaf@gmail.com",
   "license": "MIT",
