@@ -12,6 +12,7 @@ node_js:
   - '5'
 before_install:
   - npm i -g npm@^3.8.0
+  - npm i crypto-js
 before_script:
   - npm prune
 before_script:
