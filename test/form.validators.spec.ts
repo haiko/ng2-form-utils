@@ -10,7 +10,8 @@ import {
 import { Validators, Control, ControlGroup } from '@angular/common';
 
 
-import { FormValidators, ValidationResult } from '../src/ng2-formobject';
+import { FormValidators } from '../src/form.validators';
+import { ValidationResult} from '../src/ivalidationresult';
 
 export function main() {
 
