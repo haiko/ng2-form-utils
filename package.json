@@ -5,8 +5,9 @@
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "pretest": "rm -rf lib/ && tsc",
+    "pretest-watch": "rm -rf lib/ && tsc",
     "test": "karma start karma.conf.js",
-    "test-watch": "tsc && karma start --no-single-run --auto-watch",
+    "test-watch": "karma start karma.conf.js --no-single-run --auto-watch",
     "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
     "coverage": "http-server -c-1 -o -p 9875 ./coverage",
     "postinstall": "typings install",

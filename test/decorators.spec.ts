@@ -36,18 +36,18 @@ export function main() {
             let address = new Address('Dam 21', 'Amsterdam', 'Nederland');
             let person = new Person('Foobar', 27, false, new Date('12-12-2000'), 'test@github.com', address);
 
-            decorarors.email(person, 'email');
+            decorarors.emailCheck(person, 'email');
 
             let emailValidators: Array<string> = Reflect.getMetadata(decorarors.VALIDATORS, person, 'email');
             expect(emailValidators).toBeDefined();
-            expect(emailValidators[0]).toBe('email');
+            expect(emailValidators[0]).toBe('emailCheck');
         });
 
         it('should check multiple decorators are add as metadata to object property', () => {
             let address = new Address('Dam 21', 'Amsterdam', 'Nederland');
             let person = new Person('Foobar', 27, false, new Date('12-12-2000'), 'test@github.com', address);
 
-            decorarors.email(person, 'email');
+            decorarors.emailCheck(person, 'email');
             decorarors.required(person, 'email');
 
             let emailValidators: Array<string> = Reflect.getMetadata(decorarors.VALIDATORS, person, 'email');

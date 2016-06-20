@@ -1,4 +1,3 @@
-//import Decorator = ts.Decorator;
 /**
  * Created by haiko on 28-5-16.
  */
@@ -22,8 +21,19 @@ export function required(target: Object, propertyKey: string) {
  * @param target - prototype of class
  * @param propertyKey - key of property
  */
-export function email(target: Object, propertyKey: string) {
-  _addValidatorFlag('email', target, propertyKey);
+export function emailCheck(target: Object, propertyKey: string) {
+  _addValidatorFlag('emailCheck', target, propertyKey);
+
+}
+
+/**
+ * numberCheck decorator
+ *
+ * @param target - prototype of class
+ * @param propertyKey - key of property
+ */
+export function numberCheck(target: Object, propertyKey: string) {
+    _addValidatorFlag('numberCheck', target, propertyKey);
 
 }
 

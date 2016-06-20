@@ -12,7 +12,7 @@ import * as decorator from './decorators';
 
 
 
-export class FormObjectBuilder {
+export class FormObjectBuilder<T> {
 
   public controlGroup: ControlGroup;
 
@@ -38,7 +38,7 @@ export class FormObjectBuilder {
   /**
    *  Retrieve FormObject.
    */
-  getFormObject() {
+  getFormObject<T extends Object>() {
     return this.formModel;
   }
 
@@ -67,18 +67,18 @@ export class FormObjectBuilder {
   }
 
   /**
-   * Return all invalid controls.
+   * Return all invalid controls with propertyname as key.
    *
-   * @returns {Array<Control>}
-     */
+   * @returns {key:Control}
+   */
   getInvalidControls() {
-    let invalid: Array< Control > = [];
+    let invalid: { [key: string]: Control} = {};
 
     for (let controlKey in this.controls) {
       let control = this.controls[controlKey];
 
       if (!control.valid) {
-        invalid.push(control);
+        invalid[controlKey] =  control;
       }
     }
     return invalid;
@@ -109,20 +109,7 @@ export class FormObjectBuilder {
 
           let validatorComponents: Array<any> = [];
 
-          if ( Reflect.hasMetadata(decorator.VALIDATORS, object,  property)) {
-            console.log(Reflect.getMetadata(decorator.VALIDATORS, object, property));
-            let validators: Array<string> = Reflect.getMetadata(decorator.VALIDATORS, object, property);
-
-            // required
-            if (validators.indexOf('required') > -1 ){
-              validatorComponents.push(Validators.required);
-            }
-
-            // email
-            if (validators.indexOf('email') > -1 ){
-              validatorComponents.push(FormValidators.isMailAddress);
-            }
-          }
+          this._addValidators(object, property, validatorComponents);
 
           let control: any = null;
 
@@ -159,15 +146,38 @@ export class FormObjectBuilder {
     }
   }
 
+  private _addValidators(object: any, property: string, validatorComponents: Array<any>) {
+        if ( Reflect.hasMetadata(decorator.VALIDATORS, object,  property)) {
+          console.log(Reflect.getMetadata(decorator.VALIDATORS, object, property));
+          let validators: Array<string> = Reflect.getMetadata(decorator.VALIDATORS, object, property);
+
+          // required
+          if (validators.indexOf('required') > -1 ) {
+            validatorComponents.push(Validators.required);
+          }
+
+          // email
+          if (validators.indexOf('emailCheck') > -1 ) {
+            validatorComponents.push(FormValidators.isMailAddress);
+          }
+
+          // NaN check
+          if (validators.indexOf('numberCheck') > -1 ) {
+            validatorComponents.push(FormValidators.isNumber);
+          }
+        }
+      }
+
   /**
    * Check properties on given object.
    *
    * @param object
    * @param property
    * @returns {boolean|boolean}
-     */
+   */
   private _isPrimitive(object: any, property: string) {
       return typeof object[property] === 'number' || typeof object[property] === 'string' || typeof object[property] === 'boolean'
-          || (typeof object[property] === 'object' && Array.isArray(object[property])) || (typeof object[property] === 'object' && Object.prototype.toString.call(object[property]) === '[object Date]');
+          || (typeof object[property] === 'object' && Array.isArray(object[property]))
+          || (typeof object[property] === 'object' && Object.prototype.toString.call(object[property]) === '[object Date]');
       }
 }

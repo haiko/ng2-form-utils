@@ -1,7 +1,7 @@
 import { Address }  from  './address';
 
 
-export class Person {
+export class Person{
 
     name: string;
 

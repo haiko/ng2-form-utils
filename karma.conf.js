@@ -31,26 +31,30 @@ module.exports = function(config) {
             { pattern: 'node_modules/symbol-observable/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false, served: true }, // PhantomJS2 (and possibly others) might require it
 
-            { pattern: 'src/ng2-formobject.ts', included: false, watched: true }, // source files
-            { pattern: 'src/**/*.ts', included: false, watched: true }, // source files
+            // paths to support debugging with source maps in dev tools
+            {pattern: 'src/**/*.ts', included: false, watched: true},
+            {pattern: 'test/**/*.ts', included: false, watched: true},
+            {pattern: 'lib/**/*.js.map', included: false, watched: true},
             {pattern: 'lib/**/*.js', included: false, watched: true},  // test again for coverage
-           // { pattern: 'test/**/*.ts', included: false, watched: true }, // test files
             'karma-test-shim.js'
         ],
 
         // proxied base paths
-        proxies: {
-            // required for component assests fetched by Angular's compiler
-            '/src/': '/base/src/'
-        },
+        // proxies: {
+        //     // required for component assests fetched by Angular's compiler
+        //     '/src/': '/base/src/'
+        // },
 
         // list of files to exclude
         exclude: [
             'node_modules/@angular/**/*_spec.js'
         ],
 
+        // ! important
+        // comment preprocessor for debugging purposes, ie test-watch
+        // see https://github.com/karma-runner/karma-coverage/issues/234
         preprocessors: {
-            './lib/**/!(*spec).js': ['coverage']
+            './lib/**/**.js': ['coverage']
         },
         
 

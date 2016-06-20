@@ -53,7 +53,7 @@
     "no-eval": true,
     "no-null-keyword": true,
     "no-shadowed-variable": true,
-    "no-string-literal": true,
+    "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "no-unreachable": true,
     "no-unused-expression": true,
@@ -80,7 +80,7 @@
       180
     ],
     "no-require-imports": false,
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
     "object-literal-sort-keys": false,
     "trailing-comma": [
       true,
