@@ -18,4 +18,6 @@ npm install ng2-formobject --save
 
 ## Usage
 
+Create an object and feed to FormObjectBuilder. Then in your template...
+
 
