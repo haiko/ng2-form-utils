@@ -34,8 +34,8 @@ module.exports = function(config) {
             // paths to support debugging with source maps in dev tools
             {pattern: 'src/**/*.ts', included: false, watched: true},
             {pattern: 'test/**/*.ts', included: false, watched: true},
-            {pattern: 'lib/**/*.js.map', included: false, watched: true},
-            {pattern: 'lib/**/*.js', included: false, watched: true},  // test again for coverage
+            {pattern: 'dist/**/*.js.map', included: false, watched: true},
+            {pattern: 'dist/**/*.js', included: false, watched: true},  // test again for coverage
             'karma-test-shim.js'
         ],
 
@@ -54,7 +54,7 @@ module.exports = function(config) {
         // comment preprocessor for debugging purposes, ie test-watch
         // see https://github.com/karma-runner/karma-coverage/issues/234
         preprocessors: {
-            './lib/**/**.js': ['coverage']
+            './dist/**/**.js': ['coverage']
         },
         
 

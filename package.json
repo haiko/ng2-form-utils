@@ -4,14 +4,14 @@
   "main": "ng2-formobject.ts",
   "scripts": {
     "lint": "tslint src/**/*.ts",
-    "pretest": "rm -rf lib/ && tsc",
-    "pretest-watch": "rm -rf lib/ && tsc",
+    "pretest": "rm -rf dist/ && tsc",
+    "pretest-watch": "rm -rf dist/ && tsc",
     "test": "karma start karma.conf.js",
     "test-watch": "karma start karma.conf.js --no-single-run --auto-watch",
     "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
     "coverage": "http-server -c-1 -o -p 9875 ./coverage",
     "postinstall": "typings install",
-    "prepublish": "rm -rf lib && tsc",
+    "prepublish": "rm -rf dist && tsc",
     "tsc": "tsc",
     "typings": "typings",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
