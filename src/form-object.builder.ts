@@ -114,16 +114,11 @@ export class FormObjectBuilder<T> {
           let control: any = null;
 
           if (validatorComponents.length > 0) {
-            console.log('add validator');
-            console.log(validatorComponents);
-            console.log(property);
             control = new Control(object[property], Validators.compose(validatorComponents));
           }
           else {
             control = new Control(object[property]);
           }
-
-
 
           this.controls[propertyName] = control;
 
@@ -148,7 +143,7 @@ export class FormObjectBuilder<T> {
 
   private _addValidators(object: any, property: string, validatorComponents: Array<any>) {
         if ( Reflect.hasMetadata(decorator.VALIDATORS, object,  property)) {
-          console.log(Reflect.getMetadata(decorator.VALIDATORS, object, property));
+
           let validators: Array<string> = Reflect.getMetadata(decorator.VALIDATORS, object, property);
 
           // required
