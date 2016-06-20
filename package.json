@@ -1,7 +1,8 @@
 {
   "name": "ng2-formobject",
   "description": "Create forms from objects with Angular2",
-  "main": "ng2-formobject.ts",
+  "main": "dist/ng2-formobject.js",
+  "typings": "dist/ng2-formobject.d.ts",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "pretest": "rm -rf dist/ && tsc",
