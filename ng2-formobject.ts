@@ -1,7 +1,5 @@
-import { FormObjectBuilder} from './src/form-object.builder';
-import { required, emailCheck, numberCheck} from './src/decorators';
 
-export * from './src/form-object.builder';
-export * from './src/form.validators';
-export * from './src/ivalidationresult';
-export * from './src/decorators';
+export { FormObjectBuilder } from './src/form-object.builder';
+export { FormValidators } from './src/form.validators';
+export { ValidationResult } from './src/ivalidationresult';
+export { required, emailCheck, numberCheck} from './src/decorators';
