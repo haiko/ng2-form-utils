@@ -1,3 +1,6 @@
+/// <reference path="../node_modules/reflect-metadata/reflect-metadata.d.ts" />
+
+
 /**
  * Created by haiko on 18-4-16.
  *
@@ -6,7 +9,6 @@
 import { Validators, Control, ControlGroup } from '@angular/common';
 import 'rxjs/add/operator/debounceTime';
 import * as _ from 'lodash';
-import 'reflect-metadata';
 import { FormValidators } from './form.validators';
 import * as decorator from './decorators';
 

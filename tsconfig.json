@@ -10,9 +10,6 @@
         "declaration": true,
         "outDir": "./dist"
     },
-    "definitions": [
-        "node_modules/reflect-metadata/reflect-metadata.d.ts"
-    ],
     "exclude": [
         "node_modules"
     ]
