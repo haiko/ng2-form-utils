@@ -5,8 +5,7 @@
         "target": "es5",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "inlineSourceMap": true,
-        "inlineSources": true,
+        "sourceMap": true,
         "declaration": true,
         "outDir": "./dist"
     },
