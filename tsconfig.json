@@ -10,7 +10,21 @@
         "declaration": true,
         "outDir": "./dist"
     },
-    "exclude": [
-        "node_modules"
+    "files": [
+        "./node_modules/reflect-metadata/reflect-metadata.d.ts",
+        "typings/index.d.ts",
+        "ng2-formobject.ts",
+        "./src/decorators.ts",
+        "./src/form.validators.ts",
+        "./src/form-object.builder.ts",
+        "./src/ivalidationresult.ts",
+        "./test/address.ts",
+        "./test/decorators.spec.ts",
+        "./test/form.validators.spec.ts",
+        "./test/form-object.builder.spec.ts",
+        "./test/person.ts",
+        "./test/person-validators.ts"
     ]
+
+
 }
