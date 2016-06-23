@@ -1,6 +1,3 @@
-/// <reference path="../node_modules/reflect-metadata/reflect-metadata.d.ts" />
-
-
 /**
  * Created by haiko on 18-4-16.
  *
