@@ -7,7 +7,7 @@
 
 Create Angular2 Forms from Objects.
 
-ng2-formobject uses the model-driven form approach for building Angular2 forms. Large forms with more then 10 fields are tedious to code out. ng2-formobject does the heavy lifting of creating the Angular2 Controls you need.    
+ng2-formobject uses the model-driven form approach for building Angular2 forms. Large forms with more then 10 fields are tedious to code out. ng2-formobject does the heavy lifting of creating the Angular2 Controls. It only needs an form model object.  
 
 
 * [Installation](#installation)
@@ -20,6 +20,6 @@ npm install ng2-formobject --save
 
 ## Usage
 
-Create an object and feed to FormObjectBuilder. Then in your template...
+Create an object and feed to FormObjectBuilder. Then in your template you define the ngControls with as value the name of the corresponding fields of the object. This is best illustrated with an example.  
 
 
