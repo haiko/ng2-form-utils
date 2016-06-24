@@ -1,6 +1,6 @@
 {
-  "name": "ng2-formobject",
-  "description": "Create forms from objects with Angular2",
+  "name": "ng2-form-utils",
+  "description": "Deliver utility function on Angular2 Forms",
   "main": "dist/ng2-formobject.js",
   "typings": "dist/ng2-formobject.d.ts",
   "scripts": {
@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/haiko/ng2-formobject.git"
+    "url": "https://github.com/haiko/ng2-form-utils.git"
   },
   "keywords": [
     "Angular2",
     "Form",
-    "Object",
+    "util",
     "ng2",
     "decorator",
     "annotation"
@@ -32,9 +32,9 @@
   "author": "hvdschaaf@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haiko/ng2-formobject/issues"
+    "url": "https://github.com/haiko/ng2-form-utils/issues"
   },
-  "homepage": "https://github.com/haiko/ng2-formobject#readme",
+  "homepage": "https://github.com/haiko/ng2-form-utils#readme",
   "devDependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",

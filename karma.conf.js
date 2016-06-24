@@ -20,30 +20,22 @@ module.exports = function(config) {
             'node_modules/zone.js/dist/jasmine-patch.js',
             'node_modules/systemjs/dist/system.src.js',
             'node_modules/reflect-metadata/Reflect.js',
-            'node_modules/crypto-js/crypto-js.js',
             'node_modules/systemjs/dist/system-polyfills.js',
 
             { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/lodash/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/reflect-metadata/**/*.js', included: false, watched: false, served: true },
-            { pattern: 'node_modules/crypto-js/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/symbol-observable/**/*.js', included: false, watched: false, served: true },
             { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false, served: true }, // PhantomJS2 (and possibly others) might require it
 
             // paths to support debugging with source maps in dev tools
             {pattern: 'src/**/*.ts', included: false, watched: true},
             {pattern: 'test/**/*.ts', included: false, watched: true},
- //           {pattern: 'dist/**/*.js.map', included: false, watched: true},
             {pattern: 'dist/**/*.js', included: false, watched: true},  // test again for coverage
             'karma-test-shim.js'
         ],
 
-        // proxied base paths
-        // proxies: {
-        //     // required for component assests fetched by Angular's compiler
-        //     '/src/': '/base/src/'
-        // },
 
         // list of files to exclude
         exclude: [

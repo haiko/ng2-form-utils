@@ -13,7 +13,7 @@
     "files": [
         "./node_modules/reflect-metadata/reflect-metadata.d.ts",
         "typings/index.d.ts",
-        "ng2-formobject.ts",
+        "ng2-form-utils.ts",
         "./src/decorators.ts",
         "./src/form.validators.ts",
         "./src/form-object.builder.ts",
