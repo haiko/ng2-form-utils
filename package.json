@@ -1,8 +1,8 @@
 {
   "name": "ng2-form-utils",
-  "description": "Deliver utility function on Angular2 Forms",
-  "main": "dist/ng2-formobject.js",
-  "typings": "dist/ng2-formobject.d.ts",
+  "description": "Deliver utility function for Angular2 Forms",
+  "main": "dist/ng2-form-utils.js",
+  "typings": "dist/ng2-form-utils.d.ts",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "pretest": "rm -rf dist/ && tsc",
