@@ -6,7 +6,8 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/haiko/ng2-form-utils/master/LICENSE)
 
 Utility functions to assist you dealing with Angular2 Forms.
-ng2-form-utils uses the model-driven form approach for building Angular2 forms. Large forms with more then 10 fields are tedious to code out. ng2-formobject does the heavy lifting of creating the Angular2 Controls. It only needs an form model object.
+
+ng2-form-utils uses the model-driven form approach for building Angular2 forms. Large forms with more then 10 fields are tedious to code out. It does the heavy lifting of creating the Angular2 Controls.
 
 
 * [Installation](#installation)
