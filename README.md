@@ -25,14 +25,40 @@ Create object(s) that captures your form fields and feed it to FormObjectBuilder
 Let's say you need to have a person's details and address.
 ```html
 <form>
-    firstname: <input type="text" name="firstName" />
-    lastname:  <input type="text" name="lastName" />
-    birthDate: <input type="date" name="birthDate" />
-    street:    <input type="text" name="street" />
-    city:      <input type="text" name="city" />
-    country:   <input type="text" name="country" />
-    
+    firstname: <input type="text" name="firstName" ngControl="firstName"/>
+    lastname:  <input type="text" name="lastName"  ngControl="lastName"/>
+    birthDate: <input type="date" name="birthDate" ngControl="birthDate"/>
+    street:    <input type="text" name="street"    ngControl="address.street"/>
+    city:      <input type="text" name="city"      ngControl="address.city"/>
+    country:   <input type="text" name="country"   ngControl="address.country"/>
 </form>    
+```
+
+When you have these Objects
+
+Person.ts
+```typescript
+import { Address }  from  './address';
+
+export class Person{
+
+    firstName: string;
+    lastName: string
+    birthDate: Date;
+    address: Address
+}
+```
+
+Address.ts
+```typescript
+export class Address {
+
+    street: string;
+    city: string;
+    country: string;
+}
+```
+
     
 
 
