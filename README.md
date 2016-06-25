@@ -5,9 +5,9 @@
 [![peerDependency Status](https://david-dm.org/haiko/ng2-form-utils/peer-status.svg)](https://david-dm.org/haiko/ng2-form-utils#info=peerDependencies)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/haiko/ng2-form-utils/master/LICENSE)
 
-Utility functions to assist you dealing with Angular2 Forms.
+ng2-form-utils assists with creating Angular2 Forms using the model-driven form approach.
 
-ng2-form-utils uses the model-driven form approach for building Angular2 forms. Large forms with more then 10 fields are tedious to code out. It does the heavy lifting of creating the Angular2 Controls.
+Large forms with more then 10 fields are tedious to code out. ng2-form-utils offers functions to do the heavy lifting of creating the Angular2 Controls. 
 
 
 * [Installation](#installation)
@@ -20,6 +20,23 @@ npm install ng2-form-utils --save
 
 ## Usage
 
-Create an object and feed to FormObjectBuilder. Then in your template you define the ngControls with as value the name of the corresponding fields of the object. This is best illustrated with an example.  
+Create object(s) that captures your form fields and feed it to FormObjectBuilder. Then in your template you define the ngControls with the name of the corresponding fields of the object. See example below.
+
+Let's say you need to have a person's details and address.
+```html
+<form>
+    firstname: <input type="text" name="firstName" />
+    lastname:  <input type="text" name="lastName" />
+    birthDate: <input type="date" name="birthDate" />
+    street:    <input type="text" name="street" />
+    city:      <input type="text" name="city" />
+    country:   <input type="text" name="country" />
+    
+</form>    
+    
+
+
+
+
 
 
