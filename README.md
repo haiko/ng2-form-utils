@@ -1,7 +1,7 @@
 
 # ng2-form-utils
 [![Build Status](https://travis-ci.org/haiko/ng2-form-utils.svg?branch=master)](https://travis-ci.org/haiko/ng2-form-utils)
-[![Coverage Status](https://coveralls.io/repos/github/haiko/ng2-formobject/badge.svg?branch=master)](https://coveralls.io/github/haiko/ng2-form-utils?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/haiko/ng2-form-utils/badge.svg?branch=master)](https://coveralls.io/github/haiko/ng2-form-utils?branch=master)
 [![peerDependency Status](https://david-dm.org/haiko/ng2-form-utils/peer-status.svg)](https://david-dm.org/haiko/ng2-form-utils#info=peerDependencies)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/haiko/ng2-form-utils/master/LICENSE)
 
