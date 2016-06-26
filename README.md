@@ -1,6 +1,6 @@
 
 # ng2-form-utils
-[![npm version](https://img.shields.io/npm/v/ng2-simple-page-scroll.svg?style=flat)](https://www.npmjs.com/package/ng2-form-utils)
+[![npm version](https://img.shields.io/npm/v/ng2-form-utils.svg?style=flat)](https://www.npmjs.com/package/ng2-form-utils)
 [![Build Status](https://travis-ci.org/haiko/ng2-form-utils.svg?branch=master)](https://travis-ci.org/haiko/ng2-form-utils)
 [![Coverage Status](https://coveralls.io/repos/github/haiko/ng2-form-utils/badge.svg?branch=master)](https://coveralls.io/github/haiko/ng2-form-utils?branch=master)
 [![peerDependency Status](https://david-dm.org/haiko/ng2-form-utils/peer-status.svg)](https://david-dm.org/haiko/ng2-form-utils#info=peerDependencies)
