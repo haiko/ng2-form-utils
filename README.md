@@ -23,7 +23,7 @@ npm install ng2-form-utils --save
 
 ## Usage
 
-Create object(s) that captures your form fields and feed it to `FormObjectBuilder`. Then in your template you define the `ngControl`s with the name of the corresponding properties of the object. 
+Create object(s) that captures your form fields and feed it to `FormObjectBuilder`. Then in your template you define the `ngControls` with the name of the corresponding properties of the object. 
 `FormObjectBuilder` is able to deal with nested objects. It takes the property name of the nested object as prefix.
 See example below.
 
@@ -90,7 +90,7 @@ export class PersonForm {
 ```
 
 `FormObjectBuilder` will create for every property in the given Object a `Control` and one `ControlGroup`  where the controls will have been add. 
-It has some functions to retrieve the `ControlGroup` and `Control`s.
+It has some functions to retrieve the `ControlGroup` and `Controls`.
 
 
 ## API
@@ -103,7 +103,7 @@ It has some functions to retrieve the `ControlGroup` and `Control`s.
 
 - getControl(propertyName: string) - Gives the `Control` for a particular property of the object.
 
-- dirtyControls - Make all `Control`s dirty.
+- dirtyControls - Make all `Controls` dirty.
 
 - getInvalidControls - Retrieve all invalid controls.
 
