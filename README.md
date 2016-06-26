@@ -21,21 +21,24 @@ npm install ng2-form-utils --save
 
 ## Usage
 
-Create object(s) that captures your form fields and feed it to `FormObjectBuilder`. Then in your template you define the ngControls with the name of the corresponding fields of the object. See example below.
+Create object(s) that captures your form fields and feed it to `FormObjectBuilder`. Then in your template you define the `ngControl`s with the name of the corresponding properties of the object. 
+`FormObjectBuilder` is able to deal with nested objects. It takes the property name of the nested object as prefix.
+See example below.
 
+### Example
 Let's say you need to have a person's details and address.
 ```html
 <form>
-    firstname: <input type="text" name="firstName" ngControl="firstName"/>
-    lastname:  <input type="text" name="lastName"  ngControl="lastName"/>
-    birthDate: <input type="date" name="birthDate" ngControl="birthDate"/>
-    street:    <input type="text" name="street"    ngControl="address.street"/>
-    city:      <input type="text" name="city"      ngControl="address.city"/>
-    country:   <input type="text" name="country"   ngControl="address.country"/>
+    firstname: <input type="text"  ngControl="firstName"/>
+    lastname:  <input type="text"  ngControl="lastName"/>
+    birthDate: <input type="date"  ngControl="birthDate"/>
+    street:    <input type="text"  ngControl="address.street"/>
+    city:      <input type="text"  ngControl="address.city"/>
+    country:   <input type="text"  ngControl="address.country"/>
 </form>    
 ```
 
-When you have these Objects
+When you have these Objects,
 
 Person.ts
 ```typescript
@@ -60,8 +63,47 @@ export class Address {
 }
 ```
 
-    
+Now you only have to instantiate `FormObjectBuilder` with the object
 
+```typescript
+
+@Component(
+  {
+    selector: 'personForm',
+
+     template: require('./personForm.html')
+  }
+)
+
+export class PersonForm {
+
+
+  fob: FormObjectBuilder<Person>;
+
+
+  constructor() {
+
+    this.fob = new FormObjectBuilder(new Person());
+   ...
+```
+
+`FormObjectBuilder` will create for every property in the given Object a `Control` and one `ControlGroup`  where the controls will have been add. 
+It has some functions to retrieve the `ControlGroup` and `Control`s.
+
+
+## API
+
+`FormObjectBuilder` has the following methods:
+
+- getFormObject    - Retrieves given Object updated with last values from the form.
+
+- getControlGroup  - Gives the `ControlGroup`
+
+- getControl(propertyName: string) - Gives the `Control` for a particular property of the object.
+
+- dirtyControls - Make all `Control`s dirty.
+
+- getInvalidControls - Retrieve all invalid controls.
 
 
 
