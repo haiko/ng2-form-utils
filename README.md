@@ -6,7 +6,7 @@
 [![peerDependency Status](https://david-dm.org/haiko/ng2-form-utils/peer-status.svg)](https://david-dm.org/haiko/ng2-form-utils#info=peerDependencies)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/haiko/ng2-form-utils/master/LICENSE)
 
-ng2-form-utils assists with creating Angular2 Forms using the model-driven form approach.
+### ng2-form-utils assists with creating Angular2 Forms using the model-driven form approach.
 
 Large forms with more then 10 fields are tedious to code out. ng2-form-utils offers functions to do the heavy lifting of creating the Angular2 Controls. 
 
