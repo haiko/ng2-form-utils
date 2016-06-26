@@ -13,7 +13,7 @@ Large forms with more then 10 fields are tedious to code out. ng2-form-utils off
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [API](#API)
+* [API](#api)
 
 ## Installation
 First you need to install the npm module:
