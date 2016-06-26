@@ -92,7 +92,6 @@ export class PersonForm {
 `FormObjectBuilder` will create for every property in the given Object a `Control` and one `ControlGroup`  where the controls will have been add. 
 It has some functions to retrieve the `ControlGroup` and `Controls`.
 
-
 ## API
 
 `FormObjectBuilder` has the following methods:
@@ -106,8 +105,3 @@ It has some functions to retrieve the `ControlGroup` and `Controls`.
 - dirtyControls - Make all `Controls` dirty.
 
 - getInvalidControls - Retrieve all invalid controls.
-
-
-
-
-
