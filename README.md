@@ -96,12 +96,12 @@ It has some functions to retrieve the `ControlGroup` and `Controls`.
 
 `FormObjectBuilder` has the following methods:
 
-- getFormObject    - Retrieves given Object updated with last values from the form.
+- *getFormObject*    - Retrieves given Object updated with last values from the form.
 
-- getControlGroup  - Gives the `ControlGroup`
+- *getControlGroup*  - Gives the `ControlGroup`
 
-- getControl(propertyName: string) - Gives the `Control` for a particular property of the object.
+- *getControl(propertyName: string)* - Gives the `Control` for a particular property of the object.
 
-- dirtyControls - Make all `Controls` dirty.
+- *dirtyControls* - Make all `Controls` dirty.
 
-- getInvalidControls - Retrieve all invalid controls.
+- *getInvalidControls* - Retrieve all invalid controls.
