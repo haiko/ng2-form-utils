@@ -30,7 +30,7 @@ See example below.
 ### Example
 Let's say you need to have a person's details and address.
 ```html
-<form>
+<form [ngFormModel]="personForm">
     firstname: <input type="text"  ngControl="firstName"/>
     lastname:  <input type="text"  ngControl="lastName"/>
     birthDate: <input type="date"  ngControl="birthDate"/>
@@ -72,19 +72,15 @@ Now you only have to instantiate `FormObjectBuilder` with the object
 @Component(
   {
     selector: 'personForm',
-
-     template: require('./personForm.html')
+    template: require('./personForm.html')
   }
 )
 
 export class PersonForm {
 
-
   fob: FormObjectBuilder<Person>;
-
-
+  
   constructor() {
-
     this.fob = new FormObjectBuilder(new Person());
    ...
 ```
