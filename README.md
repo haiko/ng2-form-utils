@@ -48,10 +48,10 @@ import { Address }  from  './address';
 
 export class Person{
 
-    firstName: string;
-    lastName: string
-    birthDate: Date;
-    address: Address
+    firstName: string = '';
+    lastName: string = '';
+    birthDate: Date = new Date();
+    address: Address = new Address();
 }
 ```
 
@@ -59,9 +59,9 @@ Address.ts
 ```typescript
 export class Address {
 
-    street: string;
-    city: string;
-    country: string;
+    street: string = '';
+    city: string = '';
+    country: string = '';
 }
 ```
 
